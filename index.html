@@ -17,21 +17,114 @@
 </head>
 <body>
 <div>   <!-- Viewport container -->
-    <header></header>
+    <header>
+        <nav>
+            <a href="#blog">Blog</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
     <main>
         <!-- Blog -->
-        <section></section>
+        <section>
+            <h1>The Blog</h1>
+            <p>What's been going on in my head lately.</p>
+            <div>
+                <article>
+                    <h1>The Thompson Attack</h1>
+                    <img src="img/articles/Embedded-System.jpg" alt="image of computer hardware">
+                    <p>date published</p> <!-- TODO replace with proper format-->
+                    <p>The horrific security vulnerability that is near impossible to guard against - unless you can trust your supply chain and the developers that maintain them.</p>
+                    <!-- Decided to use section instead of div because a screen reader might see 'div' as a pure layout tool, whereas 'section' more accurately 
+                     describes this as additional information not explicitly tied to the original content (meta info). -->
+                    <section>   <!-- Tags that are used to identify article content -->
+                        <p>Security</p>
+                        <p>Software</p>
+                        <p>Computer Science</p>
+                    </section>
+                    <a href="">Read More..</a>
+                </article>
+                <article>
+                    <h1>Drawing with B&eacute;zier</h1>
+                    <img src="img/articles/bezier.jpg" alt="image of smooth bezier curve">
+                    <p>date published</p> <!-- TODO replace with proper format-->
+                    <p>Because curves are sexy.</p>
+                    <section>   <!-- Tags that are used to identify article content -->
+                        <p>Design</p>
+                        <p>Front End</p>
+                        <p>Mathematics</p>
+                    </section>
+                    <a href="">Read More..</a>
+                </article>
+                <article>
+                    <h1>G&ouml;dels Incompleteness Theorem</h1>
+                    <img src="img/articles/godel.jpeg" alt="artwork of Kurt Godel">
+                    <p>date published</p> <!-- TODO replace with proper format-->
+                    <p>How the brilliant mathematician discovered the limits of rational systems, and its implications on faith and belief.</p>
+                    <section>   <!-- Tags that are used to identify article content -->
+                        <p>Mathematics</p>
+                        <p>Religion</p>
+                        <p>Psycology</p>
+                    </section>
+                    <a href="">Read More..</a>
+                </article>
+            </div>
+
+            <p>See <a href="">all articles</a>.</p>
+        </section>
 
         <!-- Portfolio -->
-        <section></section>
+        <section>
+            <h1>My work as a Software developer.</h1>
+            <!--Decided to use 'article' for each project description because..
+                the W3Schools definition of <article>:
+                    " This element specifies independent, self-contained content. "
+                
+                Every project is standalone, speaks for itself and (should) not be tied to its developer's identity.
+            -->
+            <article>
+                <h1>Elory Tag Manager</h1>
+                <p>Elory - short for Elephant Memory - is a file tagging program to help you keep track of files on your system by assigning them custom defined tags. Built with Python, SQLite, and Kivy as its GUI interface.</p>
+            </article>
+            <article>
+                <h1>MrBeat Demo Program</h1>
+                <p>A simple music sampling program. Load any kind of sound sample into the kit, activate samples at different "steps", set the BPM and hear your creation come to life! 
+                    Created as part of a comprehensive Python tutorial. Implemented with Python and Kivy framework, utilizing SDL2 as the audio driver.</p>
+            </article>
+            <article>
+                <h1>MerchantCo</h1>
+                <p>An application for managing a small business' inventory and sales. Built with Django and PostGres, confined in a Docker container for deployment anywhere.</p>
+            </article>
+
+            <h1>My Software Skillset</h1>
+            <div>
+                <!-- TODO add experience icons -->
+            </div>
+        </section>
 
         <!-- About -->
-        <section></section>
+        <section>
+            <p>Hi, I'm Chris Koorzen. Aspiring software engineer, fulltime student and recreational writer.</p>
+            <p>Interested in all things STEM, the human mind, art and adrenaline.</p>
+            <p>If I'm not coding, you'll find me outside on an adventure, or in the woodshop getting splinters.</p>
+            <p>I love working with both people and technology - but in the event of a robot uprising I'm siding with Team Human.</p>
+        </section>
 
         <!-- Contact Form -->
-        <section></section>
+        <section>
+            <h1>Get in Touch</h1>
+            <p>Find me on social media.</p>
+            <div>
+                <!-- TODO Add social media links. -->
+            </div>
+            <p>Bots can mail me directly at <a href="mailto:devnull@mywebsite.com">this email address.</a></p> <!-- Haha, little honeypot for scrapers. -->
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>I respect your privacy. No cookies or trackers are used on this site.</p>
+        <p>&copy; 2024 by Chris Koorzen. All rights reserved.</p>
+    </footer>
 </div> <!-- end of Viewport container -->
 </body>
 </html>
