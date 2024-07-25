@@ -14,10 +14,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+    <!-- Font used for svg header image -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@600&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div>   <!-- Viewport container -->
     <header>
+        <div>
+            <!-- Custom svg image that writes out my name. Animate text along path. Animate only once on page load, fill=freeze to keep final animation frame constant. -->
+            <svg viewBox="0 0 300 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path id="path">
+                    <animate attributeName="d" from="m 0 26 h 0" to="m 0 26 h 300" dur="1.8s" begin="2s" repeatCount="1" fill="freeze"/>
+                </path>
+                <text font-size="26" font-family="Kode Mono" fill='none' stroke='hsla(136, 5%, 41%, 1)'>
+                    <textPath xlink:href="#path">< chris koorzen. /></textPath>
+                </text>
+            </svg>
+        </div>
         <nav>
             <a href="#blog">Blog</a>
             <a href="#portfolio">Portfolio</a>
