@@ -20,70 +20,111 @@
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@600&display=swap" rel="stylesheet">
 
 </head>
-<body>
-<div>   <!-- Viewport container -->
-    <header>
-        <div>
-            <!-- Custom svg image that writes out my name. Animate text along path. Animate only once on page load, fill=freeze to keep final animation frame constant. -->
+<body class="bg-slate-900">
+<div class="max-w-7xl">   <!-- Viewport container -->
+    <header class="bg-slate-900 p-4 max-h-32 sticky top-0">
+        <div class="">
+            <!-- Custom svg image that writes out my name. Animate text along path. 
+             Animate only once on page load, fill=freeze to keep final animation frame constant.
+             Make use of "viewBox" and "preserveAspectRatio" properties to enable smooth scaling of vector image.
+            -->
             <svg viewBox="0 0 300 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
                 <path id="path">
-                    <animate attributeName="d" from="m 0 26 h 0" to="m 0 26 h 300" dur="1.8s" begin="2s" repeatCount="1" fill="freeze"/>
+                    <animate attributeName="d" from="m 0 26 h 0" to="m 0 26 h 300" dur="1.2s" begin="1.5s" repeatCount="1" fill="freeze"/>
                 </path>
-                <text font-size="26" font-family="Kode Mono" fill='none' stroke='hsla(136, 5%, 41%, 1)'>
+                <text font-size="26" font-family="Kode Mono" fill='none' stroke='#03A062'>
                     <textPath xlink:href="#path">< chris koorzen. /></textPath>
                 </text>
             </svg>
         </div>
-        <nav>
+        <nav class="text-zinc-50 text-lg flex justify-around">
             <a href="#blog">Blog</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <main>
+    <main class="p-6 bg-slate-200">
         <!-- Blog -->
-        <section>
-            <h1>The Blog</h1>
+        <section class="mb-6">
+            <h1 class="text-3xl font-bold">
+                The Blog
+            </h1>
             <p>What's been going on in my head lately.</p>
-            <div>
-                <article>
-                    <h1>The Thompson Attack</h1>
-                    <img src="img/articles/Embedded-System.jpg" alt="image of computer hardware">
-                    <p>date published</p> <!-- TODO replace with proper format-->
-                    <p>The horrific security vulnerability that is near impossible to guard against - unless you can trust your supply chain and the developers that maintain them.</p>
+            
+            <div class="p-4 flex flex-col gap-3">
+
+                <article class="bg-slate-400 p-4 rounded-md">
+                    <h1 class="text-xl font-bold">
+                        The Thompson Attack
+                    </h1>
+                    <p>
+                        date published
+                    </p> <!-- TODO replace with proper format-->
+                    <img class="w-40 h-40 object-cover rounded-md inline-block"
+                    src="img/articles/Embedded-System.jpg" alt="image of computer hardware">
+
+                    
+                    <p class="inline-block max-w-80">
+                        The horrific security vulnerability that is near impossible to guard against - unless you can trust your supply chain and the developers that maintain them.
+                    </p>
+                    
+                    <a
+                    href="">Read Article..</a>
+                    
                     <!-- Decided to use section instead of div because a screen reader might see 'div' as a pure layout tool, whereas 'section' more accurately 
-                     describes this as additional information not explicitly tied to the original content (meta info). -->
+                    describes this as additional information not explicitly tied to the original content (meta info). -->
                     <section>   <!-- Tags that are used to identify article content -->
                         <p>Security</p>
                         <p>Software</p>
                         <p>Computer Science</p>
                     </section>
-                    <a href="">Read More..</a>
                 </article>
-                <article>
-                    <h1>Drawing with B&eacute;zier</h1>
-                    <img src="img/articles/bezier.jpg" alt="image of smooth bezier curve">
+
+                <article class="bg-slate-400 p-4 rounded-md">
+                    <h1 class="text-xl font-bold">
+                        Drawing with B&eacute;zier
+                    </h1>
                     <p>date published</p> <!-- TODO replace with proper format-->
-                    <p>Because curves are sexy.</p>
+                    <img class="w-40 h-40 object-cover rounded-md inline-block"
+                    src="img/articles/bezier.jpg" alt="image of smooth bezier curve">
+                    
+                    <p class="inline-block max-w-80">
+                        Because curves are sexy.
+                    </p>
+                    
+                    <a
+                    href="">Read Article..</a>
+
                     <section>   <!-- Tags that are used to identify article content -->
                         <p>Design</p>
                         <p>Front End</p>
                         <p>Mathematics</p>
                     </section>
-                    <a href="">Read More..</a>
                 </article>
-                <article>
-                    <h1>G&ouml;dels Incompleteness Theorem</h1>
-                    <img src="img/articles/godel.jpeg" alt="artwork of Kurt Godel"> <!-- Image attribution: https://leviweaver.bandcamp.com/album/the-letters-of-dr-kurt-g-del  -->
-                    <p>date published</p> <!-- TODO replace with proper format-->
-                    <p>How the brilliant mathematician discovered the limits of rational systems, and its implications on faith and belief.</p>
+                
+                <article class="bg-slate-400 p-4 rounded-md">
+                    <h1 class="text-xl font-bold">
+                        G&ouml;dels Incompleteness Theorem
+                    </h1>
+                    <p>
+                        date published
+                    </p> <!-- TODO replace with proper format-->
+                    <img class="w-40 h-40 object-cover rounded-md inline-block"
+                    src="img/articles/godel.jpeg" alt="artwork of Kurt Godel"> <!-- Image attribution: https://leviweaver.bandcamp.com/album/the-letters-of-dr-kurt-g-del  -->
+                    
+                    <p class="inline-block max-w-80">
+                        How the brilliant mathematician discovered the limits of rational systems, and its implications on faith and belief.
+                    </p>
+                    
+                    <a 
+                    href="">Read Article..</a>
+
                     <section>   <!-- Tags that are used to identify article content -->
                         <p>Mathematics</p>
                         <p>Religion</p>
                         <p>Psycology</p>
                     </section>
-                    <a href="">Read More..</a>
                 </article>
             </div>
 
@@ -92,7 +133,9 @@
 
         <!-- Portfolio -->
         <section>
-            <h1>My work as a Software developer.</h1>
+            <h1 class="text-3xl font-bold">
+                My work as a Software developer.
+            </h1>
             <!--Decided to use 'article' for each project description because..
                 the W3Schools definition of <article>:
                     " This element specifies independent, self-contained content. "
