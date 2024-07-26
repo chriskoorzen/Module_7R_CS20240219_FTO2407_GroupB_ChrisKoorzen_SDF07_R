@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth scroll-pt-40">
+<html lang="en" class="scroll-smooth scroll-pt-40 lg:scroll-pt-28">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +24,9 @@
 </head>
 <body class="bg-slate-100">
 <div class="container max-w-7xl mx-auto shadow-xl">   <!-- Viewport container -->
-    <header class="bg-slate-900 sticky top-0 p-4 w-content h-content">
-        <div class="flex flex-col">
-            <div class="max-w-[560px] min-w-[320px]">
+    <header class="bg-slate-900 sticky top-0 p-4 w-content h-content rounded-md lg:h-30">
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:size-full">
+            <div class="max-w-[560px] min-w-[320px] lg:w-full">
                 <!-- Custom svg image that writes out my name. Animate text along path. 
                     Animate only once on page load, fill=freeze to keep final animation frame constant.
                     Make use of "viewBox" and "preserveAspectRatio" properties to enable smooth scaling of vector image.
@@ -40,7 +40,7 @@
                     </text>
                 </svg>
             </div>
-            <nav class="text-zinc-50 text-lg flex justify-around">
+            <nav class="text-zinc-50 text-lg flex justify-around items-center lg:w-full lg:text-xl">
                 <a href="#blog" style="offset-anchor: bottom 128px;">Blog</a>
                 <a href="#skills">Skills</a>
                 <a href="#about">About</a>
@@ -172,6 +172,10 @@
                     <p class="mt-2 w-fit mx-auto">Python</p>
                 </div>
                 <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/django-logo.png">
+                    <p class="mt-2 w-fit mx-auto">Django</p>
+                </div>
+                <div class="hover:scale-125">
                     <img class="size-16" src="img/logo/docker-logo.png">
                     <p class="mt-2 w-fit mx-auto">Docker</p>
                 </div>
@@ -200,15 +204,15 @@
 
         <!-- About -->
         <section id="about" class="mb-12 bg-slate-50 shadow-lg rounded-lg p-6">
-            <h1 class="text-3xl font-bold  w-fit mx-auto mb-2">
+            <h1 class="text-3xl font-bold  w-fit mx-auto mb-3">
                 About
             </h1>
             <hr class="mb-4">
-            <img class="rounded-full object-cover object-center aspect-square w-1/4 float-right shadow-lg"
+            <img class="rounded-full object-cover object-center aspect-square w-1/4 float-right shadow-lg md:max-w-40"
              src="img/default_profile.jpeg" alt="aspiring developer">
             <p class="mb-4">Hi, I'm Chris Koorzen. Aspiring software engineer, fulltime student and recreational writer.</p>
             <p class="mb-4">Interested in all things STEM, the human mind, art and adrenaline.</p>
-            <p class="mb-4">If I'm not coding, you'll find me outside on an adventure, or in the woodshop getting splinters.</p>
+            <p class="mb-4">If I'm not coding, you'll find me outside on an adventure, or in the woodshop avoiding splinters.</p>
             <p class="mb-4">I love working with both people and technology - but in the event of a robot uprising I'm definitely siding with Team Human.</p>
         </section>
 
@@ -222,17 +226,17 @@
             </p>
             <div class="my-8 flex flex-row justify-evenly">
                 
-                <a class="text-gray-700 hover:text-black" 
+                <a class="text-gray-600 hover:text-black" 
                       href="" target="_blank">
                     <i class="fa fa-linkedin-square fa-3x" aria-label="linkedin link"></i>
                 </a>
                 
-                <a class="text-gray-700 hover:text-black" 
+                <a class="text-gray-600 hover:text-black" 
                       href="" target="_blank">
                     <i class="fa fa-github fa-3x" aria-label="github link"></i>
                 </a>
 
-                <a class="text-gray-700 hover:text-black" 
+                <a class="text-gray-600 hover:text-black" 
                       href="" target="_blank">
                     <i class="fa fa-codepen fa-3x" aria-label="codepen link"></i>
                 </a>
