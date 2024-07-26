@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    a {
+      @apply hover:underline;
+    }
+}
+
+@layer components {
+  .blog-tag {
+    @apply inline-block rounded-md p-2;
+  }
+}
+/* 
+Tag colors for specific types
+------------------------------
+Security            amber-300
+Software            sky-300
+Computer Science    indigo-300
+Design              fuchsia-300
+Front End           rose-300
+Mathematics         orange-300
+Religion            teal-300
+Psycology           cyan-300
+
+*/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-40">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,179 +10,242 @@
         Api icons created by Tanah Basah   https://www.flaticon.com/free-icon/code_8750730?related_id=8750730  -->
     <link rel="icon" type="image/png" href="img/code.png">
 
-    <!-- Prefer Tailwind CSS for styling. -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Prefer Tailwind CSS for styling -->
+    <link href="output.css" rel="stylesheet">
 
     <!-- Font used for svg header image -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@600&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
-<body class="bg-slate-900">
-<div class="max-w-7xl">   <!-- Viewport container -->
-    <header class="bg-slate-900 p-4 max-h-32 sticky top-0">
-        <div class="">
-            <!-- Custom svg image that writes out my name. Animate text along path. 
-             Animate only once on page load, fill=freeze to keep final animation frame constant.
-             Make use of "viewBox" and "preserveAspectRatio" properties to enable smooth scaling of vector image.
-            -->
-            <svg viewBox="0 0 300 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                <path id="path">
-                    <animate attributeName="d" from="m 0 26 h 0" to="m 0 26 h 300" dur="1.2s" begin="1.5s" repeatCount="1" fill="freeze"/>
-                </path>
-                <text font-size="26" font-family="Kode Mono" fill='none' stroke='#03A062'>
-                    <textPath xlink:href="#path">< chris koorzen. /></textPath>
-                </text>
-            </svg>
+<body class="bg-slate-100">
+<div class="container max-w-7xl mx-auto shadow-xl">   <!-- Viewport container -->
+    <header class="bg-slate-900 sticky top-0 p-4 w-content h-content">
+        <div class="flex flex-col">
+            <div class="max-w-[560px] min-w-[320px]">
+                <!-- Custom svg image that writes out my name. Animate text along path. 
+                    Animate only once on page load, fill=freeze to keep final animation frame constant.
+                    Make use of "viewBox" and "preserveAspectRatio" properties to enable smooth scaling of vector image.
+                -->
+                <svg viewBox="0 0 300 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <path id="path">
+                        <animate attributeName="d" from="m 0 26 h 0" to="m 0 26 h 300" dur="1.2s" begin="1.5s" repeatCount="1" fill="freeze"/>
+                    </path>
+                    <text font-size="26" font-family="Kode Mono" fill='none' stroke='#03A062'>
+                        <textPath xlink:href="#path">< chris koorzen. /></textPath>
+                    </text>
+                </svg>
+            </div>
+            <nav class="text-zinc-50 text-lg flex justify-around">
+                <a href="#blog" style="offset-anchor: bottom 128px;">Blog</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <nav class="text-zinc-50 text-lg flex justify-around">
-            <a href="#blog">Blog</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
     </header>
     <main class="p-6 bg-slate-200">
         <!-- Blog -->
-        <section class="mb-6">
-            <h1 class="text-3xl font-bold">
+        <section id="blog" class="mb-12">
+            <h1 class="text-3xl font-bold w-fit mx-auto">
                 The Blog
             </h1>
-            <p>What's been going on in my head lately.</p>
+            <p class="font-bold italic w-fit mx-auto">
+                What's been going on in my head lately.
+            </p>
             
             <div class="p-4 flex flex-col gap-3">
 
-                <article class="bg-slate-400 p-4 rounded-md">
+                <article class="bg-slate-50 p-4 rounded-md shadow-lg">
                     <h1 class="text-xl font-bold">
                         The Thompson Attack
                     </h1>
-                    <p>
-                        date published
-                    </p> <!-- TODO replace with proper format-->
-                    <img class="w-40 h-40 object-cover rounded-md inline-block"
+                    <p class="mb-1 ml-2 text-sm italic">
+                        17 Mar 2022
+                    </p>
+                    <img class="w-40 h-40 object-cover rounded-md float-left mr-3 mb-3"
                     src="img/articles/Embedded-System.jpg" alt="image of computer hardware">
 
                     
-                    <p class="inline-block max-w-80">
+                    <p class="mb-3">
                         The horrific security vulnerability that is near impossible to guard against - unless you can trust your supply chain and the developers that maintain them.
                     </p>
                     
-                    <a
+                    <a class="my-3 rounded-md bg-slate-200 p-3"
                     href="">Read Article..</a>
                     
                     <!-- Decided to use section instead of div because a screen reader might see 'div' as a pure layout tool, whereas 'section' more accurately 
                     describes this as additional information not explicitly tied to the original content (meta info). -->
-                    <section>   <!-- Tags that are used to identify article content -->
-                        <p>Security</p>
-                        <p>Software</p>
-                        <p>Computer Science</p>
+                    <section class="clear-start p-1 flex justify-start gap-2 flex-wrap mt-4">   <!-- Tags that are used to identify article content -->
+                        <p class="inline-block rounded-md p-2 bg-amber-300">
+                            Security
+                        </p>
+                        <p class="inline-block rounded-md p-2 bg-sky-300">
+                            Software
+                        </p>
+                        <p class="inline-block rounded-md p-2 bg-indigo-300">
+                            Computer Science
+                        </p>
                     </section>
                 </article>
 
-                <article class="bg-slate-400 p-4 rounded-md">
-                    <h1 class="text-xl font-bold">
-                        Drawing with B&eacute;zier
-                    </h1>
-                    <p>date published</p> <!-- TODO replace with proper format-->
-                    <img class="w-40 h-40 object-cover rounded-md inline-block"
-                    src="img/articles/bezier.jpg" alt="image of smooth bezier curve">
-                    
-                    <p class="inline-block max-w-80">
-                        Because curves are sexy.
-                    </p>
-                    
-                    <a
-                    href="">Read Article..</a>
-
-                    <section>   <!-- Tags that are used to identify article content -->
-                        <p>Design</p>
-                        <p>Front End</p>
-                        <p>Mathematics</p>
-                    </section>
-                </article>
-                
-                <article class="bg-slate-400 p-4 rounded-md">
+                <article class="bg-slate-50 p-4 rounded-md shadow-lg">
                     <h1 class="text-xl font-bold">
                         G&ouml;dels Incompleteness Theorem
                     </h1>
-                    <p>
-                        date published
+                    <p class="mb-1 ml-2 text-sm italic">
+                        19 November 2023
                     </p> <!-- TODO replace with proper format-->
-                    <img class="w-40 h-40 object-cover rounded-md inline-block"
+                    <img class="w-40 h-40 object-cover rounded-md float-left mr-3 mb-3"
                     src="img/articles/godel.jpeg" alt="artwork of Kurt Godel"> <!-- Image attribution: https://leviweaver.bandcamp.com/album/the-letters-of-dr-kurt-g-del  -->
                     
-                    <p class="inline-block max-w-80">
+                    <p class="mb-3">
                         How the brilliant mathematician discovered the limits of rational systems, and its implications on faith and belief.
                     </p>
                     
-                    <a 
+                    <a class="my-3 rounded-md bg-slate-200 p-3"
                     href="">Read Article..</a>
 
-                    <section>   <!-- Tags that are used to identify article content -->
-                        <p>Mathematics</p>
-                        <p>Religion</p>
-                        <p>Psycology</p>
+                    <section class="clear-start p-1 flex justify-start gap-2 flex-wrap mt-4">
+                        <p class="inline-block rounded-md p-2 bg-orange-300">
+                            Mathematics
+                        </p>
+                        <p class="inline-block rounded-md p-2 bg-teal-300">
+                            Religion
+                        </p>
+                        <p class="inline-block rounded-md p-2 bg-cyan-300">
+                            Psycology
+                        </p>
                     </section>
                 </article>
+
+                <article class="bg-slate-50 p-4 rounded-md shadow-lg">
+                    <h1 class="text-xl font-bold">
+                        Drawing with B&eacute;zier
+                    </h1>
+                    <p class="mb-1 ml-2 text-sm italic">
+                        22 Jul 2024
+                    </p>
+                    <img class="w-40 h-40 object-cover rounded-md float-left mr-3 mb-3"
+                    src="img/articles/bezier.jpg" alt="image of smooth bezier curve">
+                    
+                    <p class="mb-3">
+                        Because curves are sexy.
+                    </p>
+                    
+                    <a class="my-3 rounded-md bg-slate-200 p-3"
+                    href="">Read Article..</a>
+
+                    <section class="clear-start p-1 flex justify-start gap-2 flex-wrap mt-4">
+                        <p class="inline-block rounded-md p-2 bg-fuchsia-300">
+                            Design
+                        </p>
+                        <p class="inline-block rounded-md p-2 bg-rose-300">
+                            Front End
+                        </p>
+                        <p class="inline-block rounded-md p-2 bg-orange-300">
+                            Mathematics
+                        </p>
+                    </section>
+                </article>
+                
             </div>
 
-            <p>See <a href="">all articles</a>.</p>
+            <a href="" class="block w-fit mx-auto p-4 rounded-md bg-slate-400 hover:shadow-md">See all articles >></a>
         </section>
 
-        <!-- Portfolio -->
-        <section>
-            <h1 class="text-3xl font-bold">
-                My work as a Software developer.
+        <!-- Skills -->
+        <section id="skills" class="mb-12 pt-6 bg-slate-50 rounded-lg shadow-lg px-4">
+            <h1 class="text-3xl font-bold w-fit mx-auto mb-6">
+                Software Skillset
             </h1>
-            <!--Decided to use 'article' for each project description because..
-                the W3Schools definition of <article>:
-                    " This element specifies independent, self-contained content. "
+            <hr>
+            <div class="py-8 px-8 flex flex-row justify-normal flex-wrap gap-16 content-normal lg:justify-evenly">
+                <!-- Icon attribution: https://www.cleanpng.com/ -->
                 
-                Every project is standalone, speaks for itself and (should) not be tied to its developer's identity.
-            -->
-            <article>
-                <h1>Elory Tag Manager</h1>
-                <p>Elory - short for Elephant Memory - is a file tagging program to help you keep track of files on your system by assigning them custom defined tags. Built with Python, SQLite, and Kivy as its GUI interface.</p>
-            </article>
-            <article>
-                <h1>MrBeat Demo Program</h1>
-                <p>A simple music sampling program. Load any kind of sound sample into the kit, activate samples at different "steps", set the BPM and hear your creation come to life! 
-                    Created as part of a comprehensive Python tutorial. Implemented with Python and Kivy framework, utilizing SDL2 as the audio driver.</p>
-            </article>
-            <article>
-                <h1>MerchantCo</h1>
-                <p>An application for managing a small business' inventory and sales. Built with Django and PostGres, confined in a Docker container for deployment anywhere.</p>
-            </article>
-
-            <h1>My Software Skillset</h1>
-            <div>
-                <!-- TODO add experience icons -->
+                <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/python-logo.png">
+                    <p class="mt-2 w-fit mx-auto">Python</p>
+                </div>
+                <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/docker-logo.png">
+                    <p class="mt-2 w-fit mx-auto">Docker</p>
+                </div>
+                <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/linux-logo.png">
+                    <p class="mt-2 w-fit mx-auto">Linux</p>
+                </div>
+                <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/kivy-logo.png">
+                    <p class="mt-2 w-fit mx-auto">Kivy</p>
+                </div>
+                <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/postgres-logo.png">
+                    <p class="mt-2 w-fit mx-auto">Postgres</p>
+                </div>
+                <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/webstack-logo.png">
+                    <p class="mt-2 w-fit mx-auto">Webstack</p>
+                </div>
+                <div class="hover:scale-125">
+                    <img class="size-16" src="img/logo/sqlite-logo.png">
+                    <p class="mt-2 w-fit mx-auto">SQLite</p>
+                </div>
             </div>
         </section>
 
         <!-- About -->
-        <section>
-            <p>Hi, I'm Chris Koorzen. Aspiring software engineer, fulltime student and recreational writer.</p>
-            <p>Interested in all things STEM, the human mind, art and adrenaline.</p>
-            <p>If I'm not coding, you'll find me outside on an adventure, or in the woodshop getting splinters.</p>
-            <p>I love working with both people and technology - but in the event of a robot uprising I'm siding with Team Human.</p>
+        <section id="about" class="mb-12 bg-slate-50 shadow-lg rounded-lg p-6">
+            <h1 class="text-3xl font-bold  w-fit mx-auto mb-2">
+                About
+            </h1>
+            <hr class="mb-4">
+            <img class="rounded-full object-cover object-center aspect-square w-1/4 float-right shadow-lg"
+             src="img/default_profile.jpeg" alt="aspiring developer">
+            <p class="mb-4">Hi, I'm Chris Koorzen. Aspiring software engineer, fulltime student and recreational writer.</p>
+            <p class="mb-4">Interested in all things STEM, the human mind, art and adrenaline.</p>
+            <p class="mb-4">If I'm not coding, you'll find me outside on an adventure, or in the woodshop getting splinters.</p>
+            <p class="mb-4">I love working with both people and technology - but in the event of a robot uprising I'm definitely siding with Team Human.</p>
         </section>
 
         <!-- Contact Form -->
-        <section>
-            <h1>Get in Touch</h1>
-            <p>Find me on social media.</p>
-            <div>
-                <!-- TODO Add social media links. -->
+        <section id="contact" class="mb-12">
+            <h1 class="text-3xl font-bold  w-fit mx-auto">
+                Get in Touch
+            </h1>
+            <p class="font-bold italic  w-fit mx-auto">
+                Find me on the web.
+            </p>
+            <div class="my-8 flex flex-row justify-evenly">
+                
+                <a class="text-gray-700 hover:text-black" 
+                      href="" target="_blank">
+                    <i class="fa fa-linkedin-square fa-3x" aria-label="linkedin link"></i>
+                </a>
+                
+                <a class="text-gray-700 hover:text-black" 
+                      href="" target="_blank">
+                    <i class="fa fa-github fa-3x" aria-label="github link"></i>
+                </a>
+
+                <a class="text-gray-700 hover:text-black" 
+                      href="" target="_blank">
+                    <i class="fa fa-codepen fa-3x" aria-label="codepen link"></i>
+                </a>
+
             </div>
-            <p>Bots can mail me directly at <a href="mailto:devnull@mywebsite.com">this email address.</a></p> <!-- Haha, little honeypot for scrapers. -->
+            <p class="w-fit mx-auto">
+                Bots can mail me directly at <a href="mailto:devnull@mywebsite.com">this email address.</a>
+            </p> <!-- Haha, little honeypot for scrapers. -->
         </section>
     </main>
-    <footer>
-        <p>I respect your privacy. No cookies or trackers are used on this site.</p>
-        <p>&copy; 2024 by Chris Koorzen. All rights reserved.</p>
+    <footer class="bg-slate-900 text-zinc-50 text-md p-6">
+        <p class="w-fit mx-auto mb-4">I respect your privacy. No cookies or trackers are used on this site.</p>
+        <p class="w-fit mx-auto mb-4">&copy; 2024 by Chris Koorzen. All rights reserved.</p>
     </footer>
 </div> <!-- end of Viewport container -->
 </body>
